@@ -20,12 +20,50 @@ header {
   font-weight: 700;
 }
 
-nav {
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Navbar */
+.navbar {
+  background-color: #007bff; /* Azul */
+  padding: 1rem 2rem;
+}
+
+.navbar-container {
   display: flex;
-  justify-content: center;
-  align-content: flex-start;
-  flex-direction: row;
-  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.logo {
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.menu {
+  display: flex;
+  gap: 2rem;
+}
+
+.menu a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.menu a:hover {
+  color: #6e8fb3;
 }
 
 main {
