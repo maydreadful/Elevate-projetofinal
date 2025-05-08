@@ -4,64 +4,64 @@
   --primary-color: #1eaedb;
   --secondary-color: #6e8fb3;
 }
+
 * {
   margin: 0;
   padding: 0;
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   box-sizing: border-box;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
 
 body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background-color: #f8f9fa;
-  color: #333;
+  background-color: var(--background-color);
+  color: var(--font-color);
 }
 
 header {
   background-color: white;
-  color: #fff;
+  color: var(--font-color);
   padding: 2rem;
   text-align: center;
   font-weight: 700;
 }
 
 /* Navbar */
+.navbar {
+  background-color: white;
+  border-bottom: 1px solid #e2e8f0;
+}
 .navbar-container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 1rem;
-}
-
-.menu {
+  padding: 1rem 2rem;
   display: flex;
   justify-content: space-between;
-  align-items: normal;
+  align-items: center;
 }
-
-.menu a:hover {
-  color: #6e8fb3;
+.menu {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
-
 .logo a {
   font-weight: bold;
   font-size: 1.8rem;
   text-decoration: none;
   color: #1eaedb;
 }
-
 .nav-links {
   display: flex;
-  gap: 1.5rem; /* espaçamento entre os links */
+  gap: 1.5rem;
+  align-items: center;
 }
-
 .nav-links a {
   text-decoration: none;
   color: #1eaedb;
+  font-weight: 500;
 }
-
 .button-entrar {
-  background-color: #1eaedb; /* cor de fundo (azul) */
+  background-color: #1eaedb;
   color: white;
   padding: 0.5rem 1rem;
   border: none;
@@ -70,7 +70,6 @@ header {
   font-weight: 500;
   transition: opacity 0.3s ease;
 }
-
 .button-entrar:hover {
   opacity: 0.9;
 }
@@ -103,6 +102,11 @@ section {
 .content h1 {
   font-size: 4rem;
   margin: 0;
+}
+
+.content h2 {
+  font-size: 2rem;
+  font-weight: 600;
 }
 
 .content p {
@@ -140,37 +144,28 @@ section {
   /* espalha os elementos filho verticalmente por causa do flex direction */
   justify-content: space-between;
   /* centraliza os elementos filhos verticalmente */
-  align-items: flex-end; 
+  align-items: flex-end;
   /* distância entre os elementos filhos */
   gap: 10px;
   /* altura do elemento */
   height: 100px;
-
 }
 
-.card-conteudo{
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 1.5rem;
-}
-.card-conteudo {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 1.5rem;
-}
-
+.card-conteudo,
 .cards {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  justify-content: center;
+  align-items: center;
 }
 
 .card {
-  background-color: #fff;
-  border-radius: 10px;
-  padding: 1.5rem;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
-  transition: transform 0.2s;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+ align-items: center;
+  height: 100%;
 }
 
 .card:hover {
@@ -180,6 +175,7 @@ section {
 footer {
   text-align: center;
   padding: 2rem;
- background-color:black;
+  background-color: #000;
+  color: #fff;
   font-size: 0.9rem;
 }
