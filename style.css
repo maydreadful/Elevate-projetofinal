@@ -12,6 +12,7 @@
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
 
+
 body {
   background-color: var(--background-color);
   color: var(--font-color);
@@ -30,6 +31,7 @@ header {
   background-color: white;
   border-bottom: 1px solid #e2e8f0;
 }
+
 .navbar-container {
   max-width: 1200px;
   margin: 0 auto;
@@ -73,6 +75,7 @@ header {
 .button-entrar:hover {
   opacity: 0.9;
 }
+/* Main*/ 
 
 main {
   padding: 2rem;
@@ -151,27 +154,91 @@ section {
   height: 100px;
 }
 
-.card-conteudo,
-.cards {
+.cards-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 2rem;
-  justify-content: center;
-  align-items: center;
+  padding: 2rem;
 }
 
 .card {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
- align-items: center;
-  height: 100%;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+  text-align: center;
+  transition: transform 0.3s ease;
 }
 
 .card:hover {
   transform: translateY(-5px);
 }
+.vertical {
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.cards-grid .card a {
+  display: inline-block;
+  margin-top: 1rem;
+  background-color: var(--primary-color);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background-color 0.3s;
+}
+.cards-grid .card a:hover {
+  background-color: #168cb2;
+}
 
+.assistente-ia {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+/*.card-conteudo,
+      .cards {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+        justify-content: center;
+        align-items: stretch;
+      }
+
+      .card {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start;
+        height: 100%;
+        padding-bottom: 1rem;
+      }
+
+      .card a {
+        margin-top: auto;
+        background-color: var(--primary-color);
+        color: white;
+        padding: 0.5rem 1rem;
+        border-radius: 6px;
+        text-decoration: none;
+        font-weight: 500;
+        transition: background-color 0.3s;
+      }
+
+      .card a:hover {
+        background-color: #168cb2;
+      }
+
+      .card img {
+        width: 40px;
+        height: 40px;
+        margin-bottom: 1rem;
+      } */
 footer {
   text-align: center;
   padding: 2rem;
